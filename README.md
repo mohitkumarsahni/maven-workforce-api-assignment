@@ -73,6 +73,12 @@ It will start the Server on the provided port in the application properties.
           "password": "123456"
          }
       ```
+   4. Success Response:
+      ```
+      ```
+   5. Error Response:
+      ```
+      ```
       
 **2. User Sign-In :**
    1. Endpoint: /api/auth/signin
@@ -84,14 +90,40 @@ It will start the Server on the provided port in the application properties.
           "password": "123456"
          }
       ```
+   4. Success Response:
+      ```
+      ```
+   5. Error Response:
+      ```
+      ```
       
 **3. Fetch Current Integer :**
    1. Endpoint: /api/current
    2. Method Type: GET
+   3. Secured with JWT Token(required in header):
+      ```
+         Authorization: "Bearer <jwt-token>"
+      ```
+   4. Success Response:
+      ```
+      ```
+   5. Error Response:
+      ```
+      ```
    
 **4. Fetch Next Integer :**
    1. Endpoint: /api/next
    2. Method Type: GET
+   3. Secured with JWT Token(required in header):
+      ```
+         Authorization: "Bearer <jwt-token>"
+      ```
+   4. Success Response:
+      ```
+      ```
+   5. Error Response:
+      ```
+      ```
    
 **5. Reset Integer :**
    1. Endpoint: /api/current
@@ -102,4 +134,13 @@ It will start the Server on the provided port in the application properties.
              "current": 23
          }
       ```
-      
+   4. Secured with JWT Token(required in header):
+      ```
+         Authorization: "Bearer <jwt-token>"
+      ```
+   5. Success Response:
+      ```
+      ```
+   6. Error Response:
+      ```
+      ```
