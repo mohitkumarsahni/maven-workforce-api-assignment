@@ -37,3 +37,69 @@ Develop a REST service that:
 5. Run "java -jar <JAR-File-Path>"
 
 It will start the Server on the provided port in the application properties.
+
+### Data Models:
+
+**1. Success Response :**
+
+   ```
+      {
+          "response": "SUCCESS",
+          "data": <data-object>,
+          "timestamp": <timestamp-value>
+      }
+   ```
+
+**2. Error Response :**
+   ```
+      {
+          "response": "ERROR",
+          "error": {
+              "errorMessage": <detailed-message>,
+              "errorCode": <message-code>
+          },
+          "timestamp": <timestamp-value>
+      }
+   ```
+
+### APIs:
+**1. User Sign-Up :**
+   1. Endpoint: /api/auth/signup
+   2. Method Type: POST
+   3. Request Body Data Model:
+      ```
+         {
+          "email": "mohitkumarsahni@gmail.com",
+          "password": "123456"
+         }
+      ```
+      
+**2. User Sign-In :**
+   1. Endpoint: /api/auth/signin
+   2. Method Type: POST
+   3. Request Body Data Model:
+      ```
+         {
+          "email": "mohitkumarsahni@gmail.com",
+          "password": "123456"
+         }
+      ```
+      
+**3. Fetch Current Integer :**
+   1. Endpoint: /api/current
+   2. Method Type: GET
+   
+**4. Fetch Next Integer :**
+   1. Endpoint: /api/next
+   2. Method Type: GET
+   
+**5. Reset Integer :**
+   1. Endpoint: /api/current
+   2. Method Type: PUT
+   3. Request Body Data Model:
+      ```
+         {
+             "current": 23
+         }
+      ```
+      
