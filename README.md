@@ -21,3 +21,19 @@ Develop a REST service that:
 1. Build a UI for the service, especially the account creation functionality. a. Take it a step further and build the UI as a single page app that consumes your API. **[In Progress]**
 2. Allow sign up using OAuth a. Github, Facebook, Google — anything that supports it! **[In Progress]**
 3. Deploy your API and include the link in your README so we can try it out without having to run it. **[In Progress]**
+
+### How To Run:
+**Requirements:**
+1. Java 1.8
+2. Maven Build Tool.
+3. MongoDB 4.2 or above. (You can use Atlas Mongo free tier instance.)
+
+**Steps:**
+1. Change the value of MongoDB URI parameter in the "application.properties" file. Name of the parameter is : "spring.data.mongodb.uri"
+   Also can change the "server.port" value as per requirement.
+2. Clone the repository.
+3. "cd" into the cloned repository. And run "mvn clean install"
+4. The JAR will be created into the target folder.
+5. Run "java -jar <JAR-File-Path>"
+
+It will start the Server on the provided port in the application properties.
